@@ -24,8 +24,7 @@ class CreateAppointmentService {
     }
   
     const appointment = appointmentsRepository.create({provider,date :  appointmentDate,id : v4()})
-    console.log(appointment)
-    // await appointmentsRepository.save(appointment);
+    await appointmentsRepository.save(appointment);
     return appointment;
   }
 }
