@@ -28,16 +28,16 @@ export default class CreateUsers1645302450504 implements MigrationInterface {
               type: "varchar",
               isUnique : true
             },
-            {
-              name : 'created_at',
-              type : "timestamp",
-              default : 'now()'
-            },
-            {
-              name : 'updated_at',
-              type : "timestamp",
-              default : 'now()'
-            }
+              {
+                name : 'created_at',
+                type : "timestamp",
+                default : 'now()'
+              },
+              {
+                name : 'updated_at',
+                type : "timestamp",
+                default : 'now()'
+              }
           ],
         })
       )
