@@ -18,7 +18,7 @@ export default function ensureAuthenticated(request: Request, response: Response
       request.user = {id : sub?.toString() || ''}
       return next();
     } catch {
-      throw new AppError('Invalid JWT token',401)
+      throw new AppError('Invalid JWT token')
     }
 
 }

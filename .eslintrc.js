@@ -18,6 +18,11 @@ module.exports = {
   "rules": {
     "max-len" : "",
     "no-use-before-define": "off",
+    "@typescript-eslint/no_unused-vars" : [
+      "error",{
+        "argsIgnorePattern": "_"
+      }
+    ],
     "@typescript-eslint/no-use-before-define": [
       "error"
     ],
