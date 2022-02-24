@@ -1,4 +1,5 @@
 import { Router } from 'express';
+
 import AuthenticateUserService from '../services/AuthenticateUserService';
 const sessionsRouter = Router();
 
@@ -13,8 +14,8 @@ sessionsRouter.post('/', async (request, response) => {
     });
     delete user.password;
     return response.json({ user, token});
-  } catch (err: any) {
-    return response.status(400).json({ error: err?.message });
+  } catch (err : any) {
+    return response.status(err.statusCode).json({ error: err?.message });
   }
 });
 
