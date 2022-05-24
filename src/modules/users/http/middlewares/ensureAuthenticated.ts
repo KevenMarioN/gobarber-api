@@ -1,8 +1,9 @@
 import { NextFunction, Request, Response } from "express";
 import { verify } from "jsonwebtoken";
+import AppError from "@shared/errors/AppError";
 
-import AppError from "../errors/AppError";
-import authConfig from '../../config/auth';
+
+import authConfig from '@config/auth';
  
 export default function ensureAuthenticated(request: Request, response: Response, next: NextFunction) {
     const authHeader = request.headers.authorization;
